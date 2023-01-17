@@ -1,0 +1,10 @@
+.body{
+  background-color: #131313;
+  font-family: Inter, Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  min-width: 320px;
+}

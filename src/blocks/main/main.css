@@ -1,0 +1,29 @@
+
+.slider__item{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.slider__pagination{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.slider__tumbler{
+  background-color: transparent;
+  border: none;
+  font-family: 'Montserrat', Arial, 'sans-serif';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+  color: rgba(227, 223, 223, .5);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.slider__tumbler_active{
+  color: #fff;
+}

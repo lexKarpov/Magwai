@@ -1,0 +1,27 @@
+.navigation{
+  grid-area: nav;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.no-mark{
+  list-style-type: none;
+  padding: 0;
+}
+
+.navigation__list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+}
+.navigation__link{
+  font-family: 'Montserrat', Arial sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+}

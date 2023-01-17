@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magwai</title>
+</head>
+
+<body class="body">
+<div class="content">
+  <header class="header">
+    <img src="<%=require('./icons/logo.svg')%>" alt="логотип" class="header__logo">
+    <nav class="navigation">
+      <ul class="navigation__list no-mark">
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">УСЛУГИ</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">АБОНЕМЕНТЫ</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">ПОЧЕМУ МЫ</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">ОБОРУДОВАНИЕ</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">АКЦИИ</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">FAQ</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link">КОНТАКТЫ</a>
+        </li>
+      </ul>
+    </nav>
+    <button class="callback">
+      <img src="<%=require('./icons/callback.svg')%>" alt="обратный звонок" class="callback__image">
+    </button>
+    <button class="submit"><p class="submit__value">ОСТАВИТЬ ЗАЯВКУ</p></button>
+  </header>
+  <main class="main">
+    <section class="slider">
+      <div class="slider__item">
+        <div class="slider__info">
+          <h1 class="slider__title">Полет Илона Маска
+            и DOGIE COIN</h1>
+          <p class="slider__description">В прошлый четверг все офигели от полета DOGIE COIN на марс.</p>
+          <button class="submit"><p class="submit__value">ОСТАВИТЬ ЗАЯВКУ</p></button>
+        </div>
+        <div class="slider__pagination">
+          <button class="slider__tumbler slider__tumbler_active">DOgie coin</button>
+          <button class="slider__tumbler">ПАДЕНИЕ</button>
+          <button class="slider__tumbler">ВОЗВРАЩЕНИЕ</button>
+        </div>
+      </div>
+
+    </section>
+    <section class="gallery">
+      <ul class="cards">
+
+      </ul>
+    </section>
+  </main>
+  <footer class="footer">
+    <p class="footer__author">© 2020 Mesto Russia</p>
+  </footer>
+
+  <div class="popup popup_type_text-form">
+    <div class="popup__window">
+      <h2 class="popup__title">Редактировать профиль</h2>
+      <form name="profile-text-redactor" class="popup__admin popup__admin_type_text isvalid" novalidate>
+        <input type="text" placeholder="Имя" name="name" required minlength="2" maxlength="40"
+               class="popup__input popup__input_field_name">
+        <span class="error name-error"></span>
+        <input type="text" placeholder="Деятельность" required minlength="2" maxlength="200" name="activity"
+               class="popup__input popup__input_field_activity">
+        <span class="error activity-error"></span>
+        <input type="submit" value="Сохранить" class="popup__submit">
+
+      </form>
+      <button type="button" class="popup__button-close popup__button-close_type_text-form"></button>
+    </div>
+  </div>
+
+  <div class="popup popup_type_image-form">
+    <div class="popup__window">
+      <h2 class="popup__title">Новое место</h2>
+      <form name="profile-image-redactor" class="popup__admin popup__admin_type_image isvalid" novalidate>
+        <input type="text" required placeholder="Название" name="name-img" minlength="2" maxlength="30"
+               class="popup__input popup__input_field_name-img">
+        <span class="error name-img-error"></span>
+        <input type="url" required placeholder="Ссылка на картинку" name="link"
+               class="popup__input popup__input_field_link">
+        <span class="error link-error"></span>
+        <input type="submit" value="Создать" class="popup__submit">
+      </form>
+      <button type="button" class="popup__button-close popup__button-close_type_image-form"></button>
+    </div>
+  </div>
+
+  <div class="popup popup_type_redactor-image-form">
+    <div class="popup__window">
+      <h2 class="popup__title">Обновить аватар</h2>
+      <form name="profile-image-redactor" class="popup__admin popup__admin_type_image-profile isvalid" novalidate>
+        <input type="url" required placeholder="Ссылка на картинку" name="link"
+               class="popup__input popup__input_field_link">
+        <span class="error link-error"></span>
+        <input type="submit" value="Сохранить" class="popup__submit">
+      </form>
+      <button type="button" class="popup__button-close popup__button-close_type_image-profile-form"></button>
+    </div>
+  </div>
+
+  <div class="popup popup_type_image">
+    <figure class="popup__window-wrap">
+      <img src="#" alt="" class="popup__image">
+      <figcaption class="popup__figcaption"></figcaption>
+      <button type="button" class="popup__button-close popup__button-close_type_image"></button>
+    </figure>
+  </div>
+</div>
+
+<div class="popup popup_type_confirm-delete-card">
+  <div class="popup__window">
+    <form name="profile-image-redactor" class="popup__admin popup__admin_confirm-delete-card isvalid" novalidate>
+      <h2 class="popup__title">Вы уверены?</h2>
+      <input type="submit" value="Да" class="popup__submit">
+    </form>
+    <button type="button" class="popup__button-close popup__button-close_type_confirm-form"></button>
+  </div>
+</div>
+
+<template class="card-template">
+  <li class="gallery__card">
+    <img src="#" alt="" class="gallery__img">
+    <button type="button" class="gallery__delete"></button>
+    <div class="gallery__description">
+      <h2 class="gallery__title"></h2>
+      <div class="gallery__like-box">
+        <button type="button" class="gallery__like"></button>
+        <div class="gallery__like-counter">22</div>
+      </div>
+
+    </div>
+  </li>
+</template>
+</body>
+
+</html>
+
+
+<!--
+
+import React from 'react'
+import redactorAvatar from "../../images/redactorAvatar.png";
+import PopupWithForm from "../PopupWithForm/PopupWithForm";
+
+function Main (){
+
+  function handleEditAvatarClick () {
+    document.querySelector('.popup_type_redactor-image-form').classList.add('popup_opened')
+  }
+  function handleEditProfileClick () {
+    document.querySelector('.popup_type_image-form').classList.add('popup_opened')
+  }
+  function handleAddPlaceClick () {
+    document.querySelector('.popup_type_text-form').classList.add('popup_opened')
+  }
+
+
+  return (
+    <main className="main">
+      <section className="profile">
+        <div className="profile__naming">
+          <div className="profile__avatar-redactor">
+            <img src="#" alt="аватарка" className="profile__avatar"/>
+            <button className="profile__redactor-image-button" onClick={handleEditAvatarClick}><img
+              src={redactorAvatar}
+              alt="редактор картинки" className="profile__redactor-image"/></button>
+          </div>
+
+          <div className="profile__text">
+            <div className="profile__redaction">
+              <h1 className="profile__title ellipsis">Жак-Ив Кусто</h1>
+              <button aria-label="открыть редактор" type="button" className="profile__redaction-button" onClick={handleEditProfileClick}>
+              </button>
+            </div>
+            <p className="profile__subtitle ellipsis">Исследователь океана</p>
+          </div>
+        </div>
+        <button type="button" className="profile__button" onClick={handleAddPlaceClick}></button>
+      </section>
+      <section className="gallery">
+        <ul className="cards">
+
+        </ul>
+      </section>
+      <PopupWithForm name='text-form' title='Новое место'/>
+      <PopupWithForm name='image-form' title='Редактировать профиль'/>
+      <PopupWithForm name='redactor-image-form' title='Обновить аватар' />
+      <PopupWithForm name='confirm-delete-card' title='Вы уверены?'/>
+    </main>
+  )
+}
+
+export default Main; -->
