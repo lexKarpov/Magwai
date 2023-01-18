@@ -1,11 +1,121 @@
-.gallery__card{
-  border-radius: 10px;
-  background-color: #fff;
-  margin-bottom: 0px;
-  margin: 0 auto;
-  max-width: 282px;
-  object-fit: cover;
-  position: relative;
+.gallery{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, max-content);
+  justify-content: center;
+  align-items: center;
 }
+
+.gallery__title{
+  grid-row: 1/2;
+  grid-column: 1/2;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 50px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.cards{
+  grid-row: 2/3;
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding-left: 0;
+  flex-wrap: wrap;
+  max-width: 100%;
+  gap: 15px;
+  margin-bottom: 60px;
+}
+
+.card {
+  background-color: #fff;
+  margin: 0;
+  width: 320px;
+}
+
+.card__info{
+  padding: 25px 24px 30px 24px;
+}
+
+.card__img{
+  width: 100%;
+  object-fit: cover;
+}
+
+.card__title{
+  height: 26px;
+  font-family: 'Mulish', Arial, 'sans-serif';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  opacity: .79;
+  color: #171717;
+}
+
+.card__subtitle{
+  height: 52px;
+  font-family: 'Montserrat', Arial, 'sans-serif';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #171717;
+}
+
+.card__description{
+  font-family: 'Montserrat', Arial, 'sans-serif';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #666666;
+}
+
+.card__author{
+  font-family: 'Montserrat', Arial, 'sans-serif';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  color: #666666;
+}
+
+.card__name{
+  font-weight: bold;
+}
+
+.card__button{
+  background-color: #171717;
+  width: 272px;
+  height: 50px;
+  border: none;
+  font-family: 'Mulish', Arial, 'sans-serif';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #fff;
+  margin: 0 24px 30px 24px;
+  transition: background-color .5s ease;
+}
+
+.card__button:hover{
+  cursor: pointer;
+  background-color: rgba(23, 23, 23, 0.63);
+}
+
+.submit__value_type_gallery{
+  grid-row: 3/-1;
+  grid-column: 1/-1;
+  margin: 0 auto;
+}
+
 
 
