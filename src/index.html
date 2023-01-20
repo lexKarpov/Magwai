@@ -9,102 +9,106 @@
 </head>
 
 <body class="body">
-<div class="content">
-  <header class="header">
-    <img src="<%=require('./icons/logo.svg')%>" alt="логотип" class="header__logo">
-    <nav class="navigation">
-      <ul class="navigation__list no-mark">
-        <li class="navigation__item">
-          <a href="#" class="navigation__link">УСЛУГИ</a>
-        </li>
-        <li class="navigation__item">
-          <a href="#" class="navigation__link">АБОНЕМЕНТЫ</a>
-        </li>
-        <li class="navigation__item">
-          <a href="#" class="navigation__link">ПОЧЕМУ МЫ</a>
-        </li>
-        <li class="navigation__item">
-          <a href="#" class="navigation__link">ОБОРУДОВАНИЕ</a>
-        </li>
-        <li class="navigation__item">
-          <a href="#" class="navigation__link">АКЦИИ</a>
-        </li>
-        <li class="navigation__item">
-          <a href="#" class="navigation__link">FAQ</a>
-        </li>
-        <li class="navigation__item">
-          <a href="#" class="navigation__link">КОНТАКТЫ</a>
-        </li>
+  <div class="content">
+    <header class="header">
+      <img src="<%=require('./icons/logo.svg')%>" alt="логотип" class="header__logo">
+      <nav class="navigation">
+        <ul class="navigation__list no-mark">
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">УСЛУГИ</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">АБОНЕМЕНТЫ</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">ПОЧЕМУ МЫ</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">ОБОРУДОВАНИЕ</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">АКЦИИ</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">FAQ</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#" class="navigation__link">КОНТАКТЫ</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="callback">
+        <img src="<%=require('./icons/callback.svg')%>" alt="обратный звонок" class="callback__image">
+      </button>
+      <button class="submit">
+        <p class="submit__value">ОСТАВИТЬ ЗАЯВКУ</p>
+      </button>
+    </header>
+    <main class="main">
+      <ul class="slider">
+
       </ul>
-    </nav>
-    <button class="callback">
-      <img src="<%=require('./icons/callback.svg')%>" alt="обратный звонок" class="callback__image">
-    </button>
-    <button class="submit"><p class="submit__value">ОСТАВИТЬ ЗАЯВКУ</p></button>
-  </header>
-  <main class="main">
-    <ul class="slider">
+      <section class="gallery">
+        <h2 class="gallery__title">Карточки</h2>
+        <ul class="cards"></ul>
+        <button class="submit submit__value_type_gallery">
+          <p class="submit__value">ЗАГРУЗИТЬ ЕЩЕ</p>
+        </button>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__author">© 2020 Mesto Russia</p>
+    </footer>
 
-    </ul>
-    <section class="gallery">
-      <h2 class="gallery__title">Карточки</h2>
-      <ul class="cards"></ul>
-      <button class="submit submit__value_type_gallery"><p class="submit__value">ЗАГРУЗИТЬ ЕЩЕ</p></button>
-    </section>
-  </main>
-  <footer class="footer">
-    <p class="footer__author">© 2020 Mesto Russia</p>
-  </footer>
+    <div class="popup popup_type_text-form">
+      <div class="popup__window">
+        <h2 class="popup__title">Редактировать профиль</h2>
+        <form name="profile-text-redactor" class="popup__admin popup__admin_type_text isvalid" novalidate>
+          <input type="text" placeholder="Имя" name="name" required minlength="2" maxlength="40"
+            class="popup__input popup__input_field_name">
+          <span class="error name-error"></span>
+          <input type="text" placeholder="Деятельность" required minlength="2" maxlength="200" name="activity"
+            class="popup__input popup__input_field_activity">
+          <span class="error activity-error"></span>
+          <input type="submit" value="Сохранить" class="popup__submit">
 
-  <div class="popup popup_type_text-form">
-    <div class="popup__window">
-      <h2 class="popup__title">Редактировать профиль</h2>
-      <form name="profile-text-redactor" class="popup__admin popup__admin_type_text isvalid" novalidate>
-        <input type="text" placeholder="Имя" name="name" required minlength="2" maxlength="40"
-               class="popup__input popup__input_field_name">
-        <span class="error name-error"></span>
-        <input type="text" placeholder="Деятельность" required minlength="2" maxlength="200" name="activity"
-               class="popup__input popup__input_field_activity">
-        <span class="error activity-error"></span>
-        <input type="submit" value="Сохранить" class="popup__submit">
-
-      </form>
-      <button type="button" class="popup__button-close popup__button-close_type_text-form"></button>
-    </div>
-  </div>
-
-<template class="card-template">
-  <li class="card">
-    <img src="<%=require('./images/planet.jpg')%>" alt="" class="card__img">
-    <div class="card__info">
-      <h2 class="card__title"></h2>
-      <h3 class="card__subtitle"></h3>
-      <p class="card__description"></p>
-      <p class="card__author"><span class="card__name"></span></p>
-    </div>
-    <button type="button" class="card__button">Continue reading</button>
-  </li>
-</template>
-
-  <template>
-    <li class="slider__item">
-      <img src="<%=require('./images/planet.jpg')%>" alt="planet" class="slider__image">
-      <div class="slider__info">
-        <h1 class="slider__title">Полет Илона Маска
-          и DOGIE COIN</h1>
-        <p class="slider__description">В прошлый четверг все офигели от полета DOGIE COIN на марс.</p>
-        <button class="submit submit__value_type_slider"><p class="submit__value">ОСТАВИТЬ ЗАЯВКУ</p></button>
-        <div class="slider__pagination">
-          <button class="slider__tumbler slider__tumbler_active">DOgie coin</button>
-          <button class="slider__tumbler">ПАДЕНИЕ</button>
-          <button class="slider__tumbler">ВОЗВРАЩЕНИЕ</button>
-        </div>
+        </form>
+        <button type="button" class="popup__button-close popup__button-close_type_text-form"></button>
       </div>
+    </div>
 
-    </li>
-  </template>
+    <template class="card-template">
+      <li class="card">
+        <img src="<%=require('./images/planet.jpg')%>" alt="" class="card__img">
+        <div class="card__info">
+          <h2 class="card__title"></h2>
+          <h3 class="card__subtitle"></h3>
+          <p class="card__description"></p>
+          <p class="card__author"><span class="card__name"></span></p>
+        </div>
+        <button type="button" class="card__button">Continue reading</button>
+      </li>
+    </template>
+
+    <template class="slider-template">
+      <li class="slider__item">
+        <img src="#" alt="planet" class="slider__image">
+        <div class="slider__info">
+          <h1 class="slider__title"></h1>
+          <p class="slider__description"></p>
+          <button class="submit submit__value_type_slider">
+            <p class="submit__value">ОСТАВИТЬ ЗАЯВКУ</p>
+          </button>
+          <div class="slider__pagination">
+            <button class="slider__tumbler slider__tumbler_active" id="0">DOgie coin</button>
+            <button class="slider__tumbler" id="1">ПАДЕНИЕ</button>
+            <button class="slider__tumbler" id="2">ВОЗВРАЩЕНИЕ</button>
+          </div>
+        </div>
+
+      </li>
+    </template>
 
 </body>
 
 </html>
-
