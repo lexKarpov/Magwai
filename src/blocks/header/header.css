@@ -1,19 +1,18 @@
-.header{
+.header {
   box-sizing: border-box;
   display: grid;
-  grid-template-areas:
-  'logo nav . callback submit';
   grid-template-columns: repeat(2, max-content) 1fr repeat(2, max-content);
   margin: 45px 0 40px 0;
+  align-items: center;
 }
 
-.header__logo{
-  grid-area: logo;
+.header__logo {
+  grid-column: 1/2;
   margin-right: 76px;
 }
 
-.callback{
-  grid-area: callback;
+.callback {
+  grid-column: 4/5;
   border: 1px solid rgba(227, 223, 223, .5);
   display: flex;
   justify-content: center;
@@ -26,17 +25,17 @@
   background-color: transparent;
 }
 
-.callback:hover{
+.callback:hover {
   cursor: pointer;
   box-shadow: 0 4px 10px #b8a97e, 0 5px 5px #bab29e;
 }
 
-.callback__image{
+.callback__image {
   transform: skew(20deg);
 }
 
-.submit{
-  grid-area: submit;
+.submit {
+  grid-column: 5.-1;
   position: relative;
   background-color: #C2AB81;
   border: none;
@@ -47,7 +46,7 @@
   height: 60px;
 }
 
-.submit:after{
+.submit:after {
   position: absolute;
   right: -19px;
   top: 0;
@@ -57,12 +56,16 @@
   height: 60px
 }
 
-.submit:hover{
+.submit:hover {
   cursor: pointer;
   box-shadow: 0 4px 10px #b8a97e, 0 5px 5px #bab29e;
 }
 
-.submit__value{
+.submit_type_header {
+  margin-right: 36px;
+}
+
+.submit__value {
   font-family: 'Montserrat', 'Arial', 'sans-serif';
   font-style: normal;
   font-weight: 700;
@@ -73,8 +76,37 @@
   transform: skew(20deg);
 }
 
-/*@media all and (max-width: 420px){*/
-/*  .header{*/
-/*    margin: 28px 0 42px 0;*/
-/*  }*/
-/*}*/
+.header__burger {
+  display: none;
+  width: 30px;
+  height: 18px;
+  background: url('../../icons/burger.svg');
+  border: none;
+}
+
+@media all and (max-width: 1446px) {
+  .submit_type_header {
+    width: 202px;
+    height: 60px;
+    grid-column: 6/7;
+  }
+
+  .header {
+    grid-template-columns: max-content 1fr max-content 1fr repeat(2, max-content);
+    justify-content: center;
+  }
+
+  .header__logo {
+    margin-right: 36px;
+    grid-column: 3/4;
+  }
+
+  .callback {
+    width: 52px;
+    grid-column: 5/6;
+  }
+
+  .header__burger {
+    display: flex;
+  }
+}

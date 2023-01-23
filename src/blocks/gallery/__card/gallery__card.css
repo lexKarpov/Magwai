@@ -1,4 +1,4 @@
-.gallery{
+.gallery {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, max-content);
@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-.gallery__title{
+.gallery__title {
   grid-row: 1/2;
   grid-column: 1/2;
   font-family: 'Montserrat';
@@ -18,7 +18,7 @@
   color: #fff;
 }
 
-.cards{
+.cards {
   grid-row: 2/3;
   grid-column: 1/-1;
   display: flex;
@@ -37,16 +37,17 @@
   width: 320px;
 }
 
-.card__info{
+.card__info {
   padding: 25px 24px 30px 24px;
 }
 
-.card__img{
+.card__img {
   width: 100%;
+  height: 185px;
   object-fit: cover;
 }
 
-.card__title{
+.card__title {
   height: 26px;
   font-family: 'Mulish', Arial, 'sans-serif';
   font-style: normal;
@@ -59,7 +60,7 @@
   color: #171717;
 }
 
-.card__subtitle{
+.card__subtitle {
   height: 52px;
   font-family: 'Montserrat', Arial, 'sans-serif';
   font-style: normal;
@@ -69,16 +70,17 @@
   color: #171717;
 }
 
-.card__description{
+.card__description {
   font-family: 'Montserrat', Arial, 'sans-serif';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   color: #666666;
+  height: 144px;
 }
 
-.card__author{
+.card__author {
   font-family: 'Montserrat', Arial, 'sans-serif';
   font-style: normal;
   font-weight: 400;
@@ -87,11 +89,11 @@
   color: #666666;
 }
 
-.card__name{
+.card__name {
   font-weight: bold;
 }
 
-.card__button{
+.card__button {
   background-color: #171717;
   width: 272px;
   height: 50px;
@@ -106,16 +108,13 @@
   transition: background-color .5s ease;
 }
 
-.card__button:hover{
+.card__button:hover {
   cursor: pointer;
   background-color: rgba(23, 23, 23, 0.63);
 }
 
-.submit__value_type_gallery{
+.submit__value_type_gallery {
   grid-row: 3/-1;
   grid-column: 1/-1;
   margin: 0 auto;
 }
-
-
-

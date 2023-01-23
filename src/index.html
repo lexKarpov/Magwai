@@ -11,6 +11,7 @@
 <body class="body">
   <div class="content">
     <header class="header">
+      <button class="header__burger"></button>
       <img src="<%=require('./icons/logo.svg')%>" alt="логотип" class="header__logo">
       <nav class="navigation">
         <ul class="navigation__list no-mark">
@@ -40,14 +41,22 @@
       <button class="callback">
         <img src="<%=require('./icons/callback.svg')%>" alt="обратный звонок" class="callback__image">
       </button>
-      <button class="submit">
+      <button class="submit submit_type_header">
         <p class="submit__value">ОСТАВИТЬ ЗАЯВКУ</p>
       </button>
     </header>
     <main class="main">
-      <ul class="slider">
+      <div class="slider">
+        <ul class="slider__wrapper">
 
-      </ul>
+        </ul>
+        <div class="slider__pagination">
+          <button class="slider__tumbler slider__tumbler_active" id="0">DOgie coin</button>
+          <button class="slider__tumbler" id="1">ПАДЕНИЕ</button>
+          <button class="slider__tumbler" id="2">ВОЗВРАЩЕНИЕ</button>
+        </div>
+      </div>
+
       <section class="gallery">
         <h2 class="gallery__title">Карточки</h2>
         <ul class="cards"></ul>
@@ -56,32 +65,16 @@
         </button>
       </section>
     </main>
+
     <footer class="footer">
-      <p class="footer__author">© 2020 Mesto Russia</p>
+      <p class="footer__author">© Алексей Карпов</p>
     </footer>
-
-    <div class="popup popup_type_text-form">
-      <div class="popup__window">
-        <h2 class="popup__title">Редактировать профиль</h2>
-        <form name="profile-text-redactor" class="popup__admin popup__admin_type_text isvalid" novalidate>
-          <input type="text" placeholder="Имя" name="name" required minlength="2" maxlength="40"
-            class="popup__input popup__input_field_name">
-          <span class="error name-error"></span>
-          <input type="text" placeholder="Деятельность" required minlength="2" maxlength="200" name="activity"
-            class="popup__input popup__input_field_activity">
-          <span class="error activity-error"></span>
-          <input type="submit" value="Сохранить" class="popup__submit">
-
-        </form>
-        <button type="button" class="popup__button-close popup__button-close_type_text-form"></button>
-      </div>
-    </div>
 
     <template class="card-template">
       <li class="card">
-        <img src="<%=require('./images/planet.jpg')%>" alt="" class="card__img">
+        <img src="#" alt="" class="card__img">
         <div class="card__info">
-          <h2 class="card__title"></h2>
+          <h2 class="card__title ellipsis"></h2>
           <h3 class="card__subtitle"></h3>
           <p class="card__description"></p>
           <p class="card__author"><span class="card__name"></span></p>
@@ -99,11 +92,7 @@
           <button class="submit submit__value_type_slider">
             <p class="submit__value">ОСТАВИТЬ ЗАЯВКУ</p>
           </button>
-          <div class="slider__pagination">
-            <button class="slider__tumbler slider__tumbler_active" id="0">DOgie coin</button>
-            <button class="slider__tumbler" id="1">ПАДЕНИЕ</button>
-            <button class="slider__tumbler" id="2">ВОЗВРАЩЕНИЕ</button>
-          </div>
+
         </div>
 
       </li>
